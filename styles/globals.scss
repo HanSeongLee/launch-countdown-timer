@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Red Hat Text', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 a {
@@ -12,6 +16,7 @@ a {
 }
 
 * {
+  font-family: 'Red Hat Text', sans-serif;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
