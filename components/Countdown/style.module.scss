@@ -1,148 +1,160 @@
 
-.countdownBlockBackface {
-  position: relative;
-  width: 70px;
-  background: #191A23;
-  border-radius: 8px;
-  content: "";
-  overflow: hidden;
-
-  perspective: 200px;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  transform: translate3d(0,0,0);
-
-  .countdownBlock {
+.countdown {
+  .countdownBlockBackface {
     position: relative;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 67px;
-    text-align: center;
-    letter-spacing: -1px;
-    color: #FB5E84;
-    z-index: 1;
-    margin-bottom: 4px;
+    width: 70px;
+    background: #191A23;
+    border-radius: 8px;
+    content: "";
+    overflow: hidden;
 
-    &::before {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(100% - 5px);
-      background: #343650;
-      border-radius: 4px;
-      content: "";
-      z-index: -1;
-    }
+    perspective: 200px;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transform: translate3d(0,0,0);
 
-    &::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: calc(50% - 1px);
-      background: rgba(0, 0, 0, 0.15);
-      border-radius: 4px 4px 0px 0px;
-      content: "";
-    }
+    .countdownBlock {
+      position: relative;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 67px;
+      text-align: center;
+      letter-spacing: -1px;
+      color: #FB5E84;
+      z-index: 1;
+      margin-bottom: 4px;
 
-    @keyframes flipTop {
-      from {
-        transform: rotateX(0deg);
-      }
-      to {
-        transform: rotateX(90deg);
-        z-index: 0;
-      }
-    }
-
-    @keyframes flipBottom {
-      from {
-        transform: rotateX(-90deg);
-      }
-      to {
-        transform: rotateX(0deg);
-        z-index: 0;
-      }
-    }
-
-    .top {
-      width: 100%;
-      height: calc(50% - 1px);
-      transform-origin: bottom;
-      overflow: hidden;
-      background: #343650;
-
-      &:first-child {
-        display: none;
-      }
-
-      &.flip {
+      &::before {
         position: absolute;
         top: 0;
         left: 0;
-        animation-name: flipTop;
-        animation-duration: 0.25s;
-        animation-fill-mode: both;
-        z-index: 0;
-
-        &:first-child {
-          display: block;
-        }
-      }
-    }
-
-    .bottom {
-      width: 100%;
-      height: calc(50% + 1px);
-      line-height: 0;
-      overflow: hidden;
-      transform-origin: top;
-      background: #343650;
-
-      &.flip {
-        position: absolute;
-        bottom: 0;
-        animation-name: flipBottom;
-        animation-duration: 0.25s;
-        animation-delay: 0.5s;
-        animation-fill-mode: both;
-        z-index: -1;
-      }
-    }
-
-    .countdownBlockOverlay {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      height: 1px;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.25);
-      transform: scaleY(0.5) translateY(-3px);
-    }
-
-    .countdownBlockSide {
-      &::before {
-        position: absolute;
-        top: calc(50% - 4px);
-        left: -3px;
-        width: 6px;
-        height: 6px;
-        background: #191A23;
-        border-radius: 50%;
+        width: 100%;
+        height: calc(100% - 5px);
+        background: #343650;
+        border-radius: 4px;
         content: "";
+        z-index: -1;
       }
 
       &::after {
         position: absolute;
-        top: calc(50% - 4px);
-        right: -3px;
-        width: 6px;
-        height: 6px;
-        background: #191A23;
-        border-radius: 50%;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(50% - 1px);
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 4px 4px 0px 0px;
         content: "";
       }
+
+      @keyframes flipTop {
+        from {
+          transform: rotateX(0deg);
+        }
+        to {
+          transform: rotateX(90deg);
+          z-index: 0;
+        }
+      }
+
+      @keyframes flipBottom {
+        from {
+          transform: rotateX(-90deg);
+        }
+        to {
+          transform: rotateX(0deg);
+          z-index: 0;
+        }
+      }
+
+      .top {
+        width: 100%;
+        height: calc(50% - 1px);
+        transform-origin: bottom;
+        overflow: hidden;
+        background: #343650;
+
+        //&:first-child {
+        //  display: none;
+        //}
+
+        &.flip {
+          position: absolute;
+          top: 0;
+          left: 0;
+          animation-name: flipTop;
+          animation-duration: 0.25s;
+          animation-fill-mode: both;
+          z-index: 0;
+
+          &:first-child {
+            display: block;
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+        height: calc(50% + 1px);
+        line-height: 0;
+        overflow: hidden;
+        transform-origin: top;
+        background: #343650;
+
+        &.flip {
+          position: absolute;
+          bottom: 0;
+          animation-name: flipBottom;
+          animation-duration: 0.25s;
+          animation-delay: 0.5s;
+          animation-fill-mode: both;
+          z-index: -1;
+        }
+      }
+
+      .countdownBlockOverlay {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.25);
+        transform: scaleY(0.5) translateY(-3px);
+      }
+
+      .countdownBlockSide {
+        &::before {
+          position: absolute;
+          top: calc(50% - 4px);
+          left: -3px;
+          width: 6px;
+          height: 6px;
+          background: #191A23;
+          border-radius: 50%;
+          content: "";
+        }
+
+        &::after {
+          position: absolute;
+          top: calc(50% - 4px);
+          right: -3px;
+          width: 6px;
+          height: 6px;
+          background: #191A23;
+          border-radius: 50%;
+          content: "";
+        }
+      }
     }
+  }
+
+  .label {
+    font-weight: bold;
+    font-size: 7px;
+    line-height: 9px;
+    text-align: center;
+    letter-spacing: 3px;
+    color: #8385A9;
+    margin-top: 9px;
   }
 }

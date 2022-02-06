@@ -2,7 +2,8 @@ import React, {useMemo} from "react";
 import styles from './style.module.scss';
 import cn from 'classnames';
 
-const Countdown = ({ prev, count }) => {
+const Countdown = ({ prev, count, label }) => {
+
     const padPrev = useMemo(() => {
         return String(prev).padStart(2, '0');
     }, [prev]);
@@ -12,7 +13,7 @@ const Countdown = ({ prev, count }) => {
     }, [count]);
 
     return (
-        <>
+        <div className={styles.countdown}>
             <div className={styles.countdownBlockBackface}>
                 <div className={styles.countdownBlock}>
                     <div className={cn(styles.top, styles.flip)}>
@@ -33,7 +34,10 @@ const Countdown = ({ prev, count }) => {
                     </div>
                 </div>
             </div>
-        </>
+            <p className={styles.label}>
+                {label}
+            </p>
+        </div>
     );
 };
 
