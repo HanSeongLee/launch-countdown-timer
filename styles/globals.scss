@@ -8,6 +8,13 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 14px;
   font-weight: 700;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: url("/img/bg-stars.svg"), linear-gradient(180deg, #1D1E28 0%, #261C2D 94.84%, #261A2D 100%);
+  background-size: cover;
 }
 
 a {

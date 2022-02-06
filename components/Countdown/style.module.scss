@@ -1,3 +1,4 @@
+@import "styles/utils";
 
 .countdown {
   .countdownBlockBackface {
@@ -13,6 +14,10 @@
     transform: translateZ(0);
     transform: translate3d(0,0,0);
 
+    @include media(">desktop") {
+      width: 148px;
+    }
+
     .countdownBlock {
       position: relative;
       font-weight: bold;
@@ -23,6 +28,16 @@
       color: #FB5E84;
       z-index: 1;
       margin-bottom: 4px;
+      overflow: hidden;
+
+      @include media(">desktop") {
+        font-weight: bold;
+        font-size: 80px;
+        letter-spacing: -2.4px;
+        line-height: 146px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+      }
 
       &::before {
         position: absolute;
@@ -34,6 +49,10 @@
         border-radius: 4px;
         content: "";
         z-index: -1;
+
+        @include media(">desktop") {
+          border-radius: 8px;
+        }
       }
 
       &::after {
@@ -45,6 +64,10 @@
         background: rgba(0, 0, 0, 0.15);
         border-radius: 4px 4px 0px 0px;
         content: "";
+
+        @include media(">desktop") {
+          border-radius: 8px 8px 0px 0px;
+        }
       }
 
       @keyframes flipTop {
@@ -132,6 +155,13 @@
           background: #191A23;
           border-radius: 50%;
           content: "";
+
+          @include media(">desktop") {
+            top: calc(50% - 7px);
+            left: -6px;
+            width: 12px;
+            height: 12px;
+          }
         }
 
         &::after {
@@ -143,6 +173,13 @@
           background: #191A23;
           border-radius: 50%;
           content: "";
+
+          @include media(">desktop") {
+            top: calc(50% - 7px);
+            right: -6px;
+            width: 12px;
+            height: 12px;
+          }
         }
       }
     }

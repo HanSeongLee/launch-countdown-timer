@@ -1,0 +1,58 @@
+@import "styles/utils";
+
+.main {
+  position: relative;
+  padding: 142px 24px 142px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @include media(">desktop") {
+    padding-top: 132px;
+  }
+
+  &::before {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 168px;
+    background: url("/img/pattern-hills.svg");
+    background-size: cover;
+    background-position: 80%;
+    content: "";
+    z-index: -1;
+
+    @include media(">desktop") {
+      left: 0;
+      bottom: -69px;
+      height: 265px;
+      background: url("/img/pattern-hills.svg") no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 54px;
+
+    @include media(">desktop") {
+      font-size: 22px;
+      line-height: 29px;
+      letter-spacing: 7.5px;
+      margin-bottom: 104px;
+    }
+  }
+
+  .container {
+    display: flex;
+    grid-gap: 16px;
+  }
+}

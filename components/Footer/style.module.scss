@@ -1,7 +1,12 @@
+@import "styles/utils";
 
 .footer {
   position: fixed;
   bottom: 48px;
+
+  @include media(">desktop") {
+    bottom: 72px;
+  }
 
   ul {
     list-style: none;
@@ -11,9 +16,20 @@
     display: flex;
     grid-gap: 32px;
 
-    svg {
-      width: 24px;
-      height: 24px;
+    a {
+
+      @include media(">desktop") {
+        &:hover {
+          svg path {
+            fill: #FB5E84;
+          }
+        }
+      }
+
+      svg {
+        width: 24px;
+        height: 24px;
+      }
     }
   }
 }
