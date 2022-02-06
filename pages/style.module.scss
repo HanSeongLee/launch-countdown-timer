@@ -9,7 +9,7 @@
   justify-content: center;
 
   @include media(">desktop") {
-    padding-top: 132px;
+    padding: 132px 0 0;
   }
 
   &::before {
