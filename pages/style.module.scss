@@ -54,5 +54,9 @@
   .container {
     display: flex;
     grid-gap: 16px;
+
+    @include media(">tablet") {
+      grid-gap: 32px;
+    }
   }
 }

@@ -193,5 +193,12 @@
     letter-spacing: 3px;
     color: #8385A9;
     margin-top: 9px;
+
+    @include media(">tablet") {
+      font-size: 14px;
+      line-height: 19px;
+      letter-spacing: 6px;
+      margin-top: 16px;
+    }
   }
 }
