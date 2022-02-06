@@ -1,0 +1,19 @@
+
+.footer {
+  position: fixed;
+  bottom: 48px;
+
+  ul {
+    list-style: none;
+  }
+
+  .socialContainer {
+    display: flex;
+    grid-gap: 32px;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
