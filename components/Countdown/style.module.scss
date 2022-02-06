@@ -14,7 +14,7 @@
     transform: translateZ(0);
     transform: translate3d(0,0,0);
 
-    @include media(">desktop") {
+    @include media(">tablet") {
       width: 148px;
     }
 
@@ -30,7 +30,7 @@
       margin-bottom: 4px;
       overflow: hidden;
 
-      @include media(">desktop") {
+      @include media(">tablet") {
         font-weight: bold;
         font-size: 80px;
         letter-spacing: -2.4px;
@@ -50,7 +50,7 @@
         content: "";
         z-index: -1;
 
-        @include media(">desktop") {
+        @include media(">tablet") {
           border-radius: 8px;
         }
       }
@@ -65,7 +65,7 @@
         border-radius: 4px 4px 0px 0px;
         content: "";
 
-        @include media(">desktop") {
+        @include media(">tablet") {
           border-radius: 8px 8px 0px 0px;
         }
       }
@@ -156,7 +156,7 @@
           border-radius: 50%;
           content: "";
 
-          @include media(">desktop") {
+          @include media(">tablet") {
             top: calc(50% - 7px);
             left: -6px;
             width: 12px;
@@ -174,7 +174,7 @@
           border-radius: 50%;
           content: "";
 
-          @include media(">desktop") {
+          @include media(">tablet") {
             top: calc(50% - 7px);
             right: -6px;
             width: 12px;

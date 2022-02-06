@@ -26,10 +26,10 @@
 
     @include media(">desktop") {
       left: 0;
-      bottom: -69px;
-      height: 265px;
+      bottom: 0;
+      width: 100%;
       background: url("/img/pattern-hills.svg") no-repeat;
-      background-size: contain;
+      background-size: cover;
     }
   }
 
