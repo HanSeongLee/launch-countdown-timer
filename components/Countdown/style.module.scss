@@ -86,7 +86,7 @@
         }
         to {
           transform: rotateX(0deg);
-          z-index: 0;
+          z-index: -1;
         }
       }
 
@@ -131,7 +131,6 @@
           animation-duration: 0.25s;
           animation-delay: 0.5s;
           animation-fill-mode: both;
-          z-index: -1;
         }
       }
 
